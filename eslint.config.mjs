@@ -1,7 +1,13 @@
-import globals from "globals";
-
-
-/** @type {import('eslint').Linter.Config[]} */
 export default [
-  {languageOptions: { globals: globals.browser }},
+  {
+    ignores: ["node_modules/**"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module"
+    },
+    rules: {
+      semi: ["error", "always"],
+      quotes: ["error", "double"]
+    }
+  }
 ];
